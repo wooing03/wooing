@@ -3,30 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>4주차 퀴즈</title>
 </head>
 <body>
     <div>
-        <input id="inp-num1"/> + <input id="inp-num2"/> = <input id="inp-result"/>
+        <input id="inp-num1"/> 
+        <span id="operator">+</span> 
+        <input id="inp-num2"/> = 
+        <input id="inp-result"/>
     </div>
     <div>
-        <button id="btn-submit">submit</button>
+        <button id="btn-add">+</button>
+        <button id="btn-sub">-</button>
     </div>
 
     <script>
         var inpNum1 = document.getElementById("inp-num1");
         var inpNum2 = document.getElementById("inp-num2");
         var inpResult = document.getElementById("inp-result");
-        var btnSubmit = document.getElementById("btn-submit");
+        var btnAdd = document.getElementById("btn-add");
+        var btnSub = document.getElementById("btn-sub");
+        var operator = document.getElementById("operator");
 
-        btnSubmit.addEventListener("click", () => {
+        // 덧셈
+        btnAdd.addEventListener("click", () => {
             var num1 = parseInt(inpNum1.value);
             var num2 = parseInt(inpNum2.value);
             var result = num1 + num2;
-            console.log(result);
-
+            operator.textContent = "+";   // 연산 기호 표시
             inpResult.value = result;
-        })
+        });
+
+        // 뺄셈
+        btnSub.addEventListener("click", () => {
+            var num1 = parseInt(inpNum1.value);
+            var num2 = parseInt(inpNum2.value);
+            var result = num1 - num2;
+            operator.textContent = "-";   // 연산 기호 표시
+            inpResult.value = result;
+        });
     </script>
 </body>
 </html>

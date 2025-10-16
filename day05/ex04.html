@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body
+    <input type="range" min="0" max="100" value="50" id="inp-volume"/>
+    <p>볼륨 : 0%</p>
+
+    <script>
+        const inpvolume = document.getElementById("inp-volume")
+        const columeTxt = document.getElementById("volumeYxt")
+
+        inpVolume.addEventListener('input',()=>{
+            console.log("input : " + inpvolume.value)
+            volumeTxt.innerText = 'volue : ${inpvolume.value}'
+        })
+        inpVolume.addEventListener('change',()=>{
+            console.log("change : " + inpvolume.value)
+            volumeTxt.innerText = 'volue : ${inpvolume.value }% OK'
+        })
+    </script>

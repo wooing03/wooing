@@ -7,7 +7,7 @@
 </head>
 <body>
     <input type="range" min="0" max="100" value="50" id="inp-volume"/>
-    <p>볼륨 : 0%</p>
+    <p id="volumeTxt"  >  볼륨 : 0%</p>
 
     <script>
         const inpvolume = document.getElementById("inp-volume")
@@ -15,13 +15,13 @@
 
         inpVolume.addEventListener('input',()=>{
             console.log("input : " + inpvolume.value)
-            volumeTxt.innerText = 'volue : ${inpvolume.value}'
+            volumeTxt.innerText = 'volue : ${inpVolume.value}'
         })
         inpVolume.addEventListener('change',()=>{
             console.log("change : " + inpvolume.value)
-            volumeTxt.innerText = 'volue : ${inpvolume.value }% OK'
+            volumeTxt.innerText = 'volue : ${inpVolume.value }% OK'
         })
     </script>
 
     </body>
-    </html>
+    </html>      

@@ -6,6 +6,20 @@
     <title> ex02 </title>
 </head>
 <body>
-    
+    <textarea id ="teIput" placeholder="입력해주세요" rows=:"10"></textarea>
+    <button id ="btnOk">ok</button>
+    <button id="btnClear">clear</button>
+    <script>
+       
+       const teIput = document.getElementById("teIput");
+       const btnok = document.getElementById("btnOk");
+       const btnClear = document.getElementById("btnClear");
+         btnok.addEventListener("click", () => {
+              console.log(teIput.value);
+         })
+         btnClear.addEventListener("click", () => {
+              teIput.value = "";
+         })
+    </script>
 </body>
 </html>

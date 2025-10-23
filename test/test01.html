@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>카운터</title>
+  <style>
+    body {
+        background-color: blue;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: "press center 2p", cursive;
+        color : white;
+
+    }
+    h1 {
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="count-text"> count : 0 </h1>
+  <button id="btn-inc">Inc(+)</button>
+  <button id="btn-dec">Dec(-)</button>
+  <button id="btn-res">Reset</button>
+
+  <script>
+    var countText = document.getElementById("count-text");
+    var btnInc = document.getElementById("btn-inc");
+    var btnDec = document.getElementById("btn-dec");
+    var btnRes = document.getElementById("btn-res");
+    var count = 0;
+
+    // 증가
+    btnInc.addEventListener("click", () => {
+      count++;
+      countText.innerText = "count : " + count;
+    });
+
+    // 감소
+    btnDec.addEventListener("click", () => {
+      count--;
+      countText.innerText = "count : " + count;
+    });
+
+    // 리셋
+    btnRes.addEventListener("click", () => {
+      count = 0;
+      countText.innerText = "count : " + count;
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'KorailDdonggeunGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KorailRoundGothicLight.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+body {
+  font-family: 'KorailDdonggeunGothic';
+  margin: 0;
+  background-color: #000;
+  color: white;
+
+  /* 화면 중앙 배치 */
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center;     /* 세로 중앙 */
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center;    /* 내부 요소 가운데 */
+  gap: 20px;              /* 요소 사이 간격 */
+}
+
+.box-1 {
+  font-size: 64px;
+}
+
+.box-2,
+.box-3 {
+  font-size: 32px;
+}
+
+
+
+  
+

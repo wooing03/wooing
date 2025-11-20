@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'Pretendard', sans-serif;
+}
+
+.title {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.piano-container {
+    position: relative;
+    width: 700px;
+    height: 250px;
+    margin: auto;
+}
+
+/* ─────────────────────────── */
+/*   흰 건반                    */
+/* ─────────────────────────── */
+
+.white-keys {
+    display: flex;
+}
+
+.key.white {
+    width: 80px;
+    height: 250px;
+    border: 2px solid #000;
+    background: white;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    transition: 0.1s;
+}
+
+.key.white.active {
+    background: #858484;
+    transform: translateY(5px);
+}
+
+/* 흰 건반 글자 */
+.key-label {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+/* ─────────────────────────── */
+/*   검은 건반                  */
+/* ─────────────────────────── */
+
+.black-keys {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+}
+
+.key.black {
+    width: 50px;
+    height: 150px;
+    background: black;
+    position: absolute;
+    border-radius: 0 0 3px 3px;
+    z-index: 10;
+    transition: 0.1s;
+}
+
+.key.black.active {
+    background: #333;
+    transform: translateY(5px);
+}
+
+/* 검은 건반 글자 */
+.key-label-black {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
